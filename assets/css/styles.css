@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 .container{
     border: 2px solid #00ff00
+=======
+.jumbotron{
+    text-align: center;
+    font-style: 'Open Sans', sans-serif;
+    background-color: darkblue;
+    color: white;
+
+>>>>>>> caeb32ad10659aabfe66f7ef3d79452f9bfc66ca
 }
