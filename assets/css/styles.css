@@ -1,7 +1,9 @@
 .jumbotron{
     text-align: center;
     font-style: 'Open Sans', sans-serif;
-    background-color: darkblue;
+    background-color: rgb(34, 34, 92);
     color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
