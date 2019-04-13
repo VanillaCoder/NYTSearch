@@ -1,13 +1,15 @@
 .container{
-    border: 2px solid white;
+    border: 2px solid black;
 }
 .jumbotron{
     text-align: center;
     font-style: 'Open Sans', sans-serif;
     background-color: rgb(34, 34, 92);
-    color: white;
+    color: black;
     margin-left: 10px;
     margin-right: 10px;
+    background-image: url(../images/cityImg.jpg);
+
 
 }
 .formContainer{
@@ -25,4 +27,11 @@
 }
 .heading{
     padding: 5px;
+    font-style: 'Open Sans', sans-serif;
+    color: white;
+
 }
+
+body {
+    background-image: url(../images/cityImg.jpg);
+  }
