@@ -17,6 +17,18 @@ $("#searchBtn").on("click", function () {
         console.log(response);
         console.log(response.response.docs[0].headline.main);
         console.log(response.response.docs[0].snippet);
+
+        var variable = $("<div>");
+        
+        variable.attr("class", "formContainer");
+
+        var articleTitle = response.response.docs[0].headline.main;
+        var articleSnippet = response.response.docs[0].snippet;
+
+        $(variable).append(articleTitle);
+        $(variable).append(articleSnippet);
+
+        $("#articles").append(variable)
     }
 )
 })
