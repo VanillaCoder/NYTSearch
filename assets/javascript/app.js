@@ -1,34 +1,32 @@
 
+$("#searchBtn").on("click", function () {
+    event.preventDefault();
+    console.log("CLICK");
+    var term = $("#searchTerm").val()
+    console.log(term);
+    var recNumber = $("#numberOfRec").val();
+    //TODO loop later
+    var apiKey = "b97PVFoem0M22HUVjcdSHpLd6ky0e9Wz";
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + term + "&api-key=" + apiKey;
 
-//  TODO: display articles in html.
-//  TODO: clear articles fxn.
-//  $("button").on("click", function() {
-    // var person = $(this).attr("data-person");
-    // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    //   person + "&api_key=dc6zaTOxFJmzC&limit=10";
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function (response) {
 
-var apiKey = "b97PVFoem0M22HUVjcdSHpLd6ky0e9Wz";
-var term = $("#searchTerm").text;
-var recNumber = $("#numberOfRec").text;
+        console.log(response);
+        console.log(response.response.docs[0].headline.main);
+        console.log(response.response.docs[0].snippet);
+    }
+)
+})
 
 //TODO add to url
-var startYear = $("#startYear").text;
-var endYear = $("#endYear").text;
-
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + term + "&api-key=" + apiKey;
-
-$.ajax({
-    url: queryURL,
-    method: "GET",
-}).then(function(response) {
-    
-    console.log(response);
-    console.log(response.response.docs[0].headline.main);
-    console.log(response.response.docs[0].snippet);
+// var startYear = $("#startYear").text;
+// var endYear = $("#endYear").text;
 
 
 
-}
-)
+
 
 
