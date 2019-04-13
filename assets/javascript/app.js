@@ -17,14 +17,11 @@ var endYear = $("#endYear").text;
 
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + term + "&api-key=" + apiKey;
 
-
-
 $.ajax({
     url: queryURL,
     method: "GET",
 }).then(function(response) {
     
-
     console.log(response);
     console.log(response.response.docs[0].headline.main);
     console.log(response.response.docs[0].snippet);
